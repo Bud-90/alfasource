@@ -21,7 +21,7 @@ jobs:
 
       - name: Deploy via rsync
         run: |
-          rsync -avz --delete --omit-dir-times \
+          rsync -avz --delete --omit-dir-times --no-perms \
             --exclude '.git' \
             --exclude '.github' \
             --exclude '.gitignore' \
